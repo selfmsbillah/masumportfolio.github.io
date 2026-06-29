@@ -1,10 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masum Billah - Portfolio</title>
-    <!-- এখানে style.css পরিবর্তন করে index.css করে দেওয়া হয়েছে -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -92,6 +92,21 @@
     <footer>
         <p>&copy; 2026 Masum Billah. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'auto'
+                });
+            }, 10);
+        });
+    </script>
 
 </body>
 </html>
