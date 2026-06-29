@@ -62,7 +62,7 @@ body {
 
 /* কভার ফটো ও হেডার ডিজাইন */
 .hero-section {
-    background-image: url('Cover.jpeg'); 
+    background-image: url('cover.jpeg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
