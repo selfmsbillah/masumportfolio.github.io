@@ -1,4 +1,4 @@
- জেনারেল ریسےٹ */
+/* জেনারেল ریسےٹ */
 * {
     margin: 0;
     padding: 0;
@@ -96,7 +96,7 @@ body {
 .logo-html { top: 20%; left: 8%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.4)); animation-delay: 0s !important; }
 .logo-css { bottom: 15%; left: 5%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.4)); animation-delay: 1.5s !important; }
 .logo-js { bottom: 12%; left: 28%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.4)); animation-delay: 3s !important; }
-.logo-node { top: 15%; right: 28%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.4)); animation-delay: 0.8s !important; }
+.logo-node { top: 25%; right: 5%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.4)); animation-delay: 0.8s !important; } /* নোড জেএস ডান পাশে সরানো হলো */
 .logo-react { bottom: 15%; right: 5%; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.4)); animation-delay: 2.2s !important; }
 
 @keyframes floatAnimation {
@@ -124,7 +124,7 @@ body {
 }
 
 .hero-text h1.fade-in-title {
-    font-size: 56px; 
+    font-size: 42px; /* বড় স্ক্রিনের জন্য টাইটেল সাইজ একটু ছোট করা হলো */
     color: #60a5fa; 
     margin-bottom: 20px;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
