@@ -60,7 +60,7 @@ body {
     color: #ff4757;
 }
 
-/* কভার ফটো ও হেডার ডিজাইন (ল্যাপটপের জন্য সব আগের মতোই আছে) */
+/* কভার ফটো ও হেডার ডিজাইন (ল্যাপটপের জন্য পারফেক্ট শ্যাডো সেটআপ) */
 .hero-section {
     background-image: url('cover.jpeg'); 
     background-size: cover;
@@ -103,8 +103,9 @@ body {
     100% { transform: translateY(0px) rotate(0deg); }
 }
 
+/* কালো শ্যাডো বা ওভারলে লেয়ার */
 .overlay {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
     width: 100%;
     height: 100%;
     display: flex;
@@ -140,7 +141,6 @@ body {
     animation-delay: 0.3s; 
 }
 
-/* পিসির জন্য মোবাইল প্রোফাইল ডিফল্টভাবে হাইড থাকবে */
 .mobile-profile-container {
     display: none;
 }
@@ -203,7 +203,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* 서비스 গ্রি드 */
+/* সার্ভিস গ্রিড */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -325,76 +325,92 @@ footer {
 
     .nav-links { gap: 20px; }
 
-    /* মোবাইলের জন্য কভার ব্যাকগ্রাউন্ড ইমেজ */
+    /* 🎯 মোবাইলের জন্য কভার ব্যাকগ্রাউন্ড ও কালো শ্যাডো ওপর-নিচে পুরোপুরি ফিট ফিক্স */
     .hero-section {
         background-image: url('cover2.jpg'); 
-        height: auto;
-        padding: 130px 0 60px 0; /* প্যাডিং ঠিক করা হলো যাতে টেক্সট ক্লিয়ার থাকে */
+        height: 60vh; /* উচ্চতা সুনির্দিষ্ট করা হলো যেন ওপর-নিচে কালো শ্যাডো নিখুঁত ফিট হয় */
+        margin-top: 60px;
+        padding: 0; /* প্যাডিং রিমুভ করে ফ্লেক্সিবল করা হলো */
+        display: flex;
+        align-items: center;
+    }
+
+    /* 🎯 শ্যাডো ওভারলে মোবাইলের পুরো এরিয়া জুড়ে ১০০% ফিট হবে */
+    .overlay {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.45); /* টেক্সট স্পষ্ট করার জন্য শ্যাডো একটু ডিপ করা হলো */
     }
 
     .hero-text {
         padding: 0 24px;
         text-align: center;
+        width: 100%;
     }
 
     .hero-text h1.fade-in-title {
-        font-size: 34px; 
+        font-size: 32px; 
+        margin-bottom: 12px;
     }
 
     .hero-text p.fade-in-subtitle {
-        font-size: 18px;
+        font-size: 17px;
     }
 
-    /* 🎯 মোবাইলে "Contact Me" বাটন হাইড করার জন্য */
-    .btn.fade-in-btn {
+    /* 🎯 মোবাইলে "Contact Me" বাটন স্থায়ীভাবে ভ্যানিশ */
+    .hide-on-mobile {
         display: none !important;
     }
 
-    /* 🎯 প্রোফাইল পিকচারের পজিশন সুন্দর করার জন্য ফিক্স */
+    /* 🎯 প্রোফাইল পিকচার কভারের নিচে মার্জিন করে নিখুঁত পজিশনে ফিট */
     .mobile-profile-container {
         display: flex;
         justify-content: center;
-        margin-top: -65px; /* কভারের নিচে সুন্দরভাবে হাফ-ওভারল্যাপ করার জন্য পারফেক্ট মার্জিন */
+        margin-top: -65px; /* কভারের নিচের বর্ডারে চমৎকার হাফ-ওভারল্যাপ লুক */
         position: relative;
         z-index: 99;
     }
 
     /* প্রোফাইল ফটো স্টাইল */
     .mobile-profile-img {
-        width: 135px;
-        height: 135px;
+        width: 130px;
+        height: 130px;
         object-fit: cover;
         border-radius: 50%; 
-        border: 4px solid #ff4757; /* পিংক কালার আউটলাইন */
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); 
+        border: 4px solid #ff4757; /* থিমের সাথে মানানসই পিংক আউটলাইন */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6); 
         background-color: #080b10;
     }
 
     /* মোবাইলের স্ক্রিনে ভাসমান লোগো পজিশন */
     .floating-logos i {
-        font-size: 38px; 
-        opacity: 0.25; 
+        font-size: 35px; 
+        opacity: 0.2; 
     }
-    .logo-html { top: 12%; left: 6%; }
-    .logo-css { bottom: 5%; left: 5%; }
-    .logo-js { bottom: 5%; right: 5%; left: auto; }
-    .logo-node { top: 12%; right: 6%; }
-    .logo-react { top: 45%; left: 4%; }
+    .logo-html { top: 15%; left: 8%; }
+    .logo-css { bottom: 10%; left: 8%; }
+    .logo-js { bottom: 10%; right: 8%; left: auto; }
+    .logo-node { top: 15%; right: 8%; }
+    .logo-react { top: 45%; left: 5%; }
 
     /* প্যাডিং স্পেস অ্যাডজাস্টমেন্ট */
-    .container { padding: 60px 20px; }
-    #about.container { padding-top: 35px; } 
+    .container { padding: 50px 20px; }
+    #about.container { padding-top: 45px; } 
     
-    h2 { font-size: 28px; }
-    .container p { font-size: 16px; }
+    h2 { font-size: 26px; }
+    .container p { font-size: 15px; }
 
+    .services-grid { gap: 20px; }
     .service-card {
         width: 100%; 
-        padding: 35px 24px;
+        padding: 30px 20px;
     }
 
     .skill-tag {
-        padding: 10px 20px;
-        font-size: 15px;
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
