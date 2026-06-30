@@ -79,6 +79,7 @@ body {
     overflow: hidden; 
 }
 
+/* ভাসমান লোগো অ্যানিমেশন এরিয়া */
 .floating-logos {
     position: absolute;
     top: 0;
@@ -96,9 +97,10 @@ body {
     animation: floatAnimation 6s ease-in-out infinite;
 }
 
-.logo-html { top: 20%; left: 8%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.4)); animation-delay: 0s !important; }
-.logo-css { bottom: 15%; left: 5%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.4)); animation-delay: 1.5s !important; }
-.logo-js { bottom: 12%; left: 28%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.4)); animation-delay: 3s !important; }
+/* 🎯 আইকনগুলোর নতুন এবং পারফেক্ট পজিশন (যা Welcome লেখার নিচে পড়বে না) */
+.logo-html { top: 15%; left: 3%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.4)); animation-delay: 0s !important; }
+.logo-css { bottom: 25%; left: 3%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.4)); animation-delay: 1.5s !important; }
+.logo-js { top: 22%; left: 52%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.4)); animation-delay: 3s !important; } /* মার্ক করা খালি জায়গায় */
 .logo-node { top: 25%; right: 5%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.4)); animation-delay: 0.8s !important; }
 .logo-react { bottom: 15%; right: 5%; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.4)); animation-delay: 2.2s !important; }
 
@@ -108,6 +110,7 @@ body {
     100% { transform: translateY(0px) rotate(0deg); }
 }
 
+/* কভারের ওপরের কালো শ্যাডো লেয়ার */
 .overlay {
     background-color: rgba(0, 0, 0, 0.35);
     width: 100%;
@@ -138,7 +141,7 @@ body {
     width: 100%;
 }
 
-/* 🎯 প্রিমিয়াম মসৃণ টাইপিং স্টাইল (মাখনের মতো স্লাইডিং লুক) */
+/* প্রিমিয়াম মসৃণ টাইপিং স্টাইল */
 .typing-text {
     display: inline-block;
     white-space: nowrap;
@@ -149,6 +152,7 @@ body {
     animation: premiumTyping 5s ease-in-out infinite, blink 0.75s step-end infinite;
 }
 
+/* Masum Billah লেখার কালার গ্রেডিয়েন্ট */
 .name-text {
     background: linear-gradient(to right, #ff4757, #60a5fa);
     -webkit-background-clip: text;
@@ -157,7 +161,7 @@ body {
     margin-top: 5px;
 }
 
-/* 🎯 প্রিমিয়াম কিফ্রেম লুপ (১.৫ সেকেন্ডে টাইপ -> ২.৫ সেকেন্ড হোল্ড -> ফেড-আউট) */
+/* প্রিমিয়াম কিফ্রেম লুপ */
 @keyframes premiumTyping {
     0% { width: 0; opacity: 0; }
     5% { opacity: 1; }
@@ -167,6 +171,7 @@ body {
     100% { width: 0; opacity: 0; }
 }
 
+/* কার্সর ব্লিঙ্কিং */
 @keyframes blink {
     from, to { border-color: transparent }
     50% { border-color: #ff4757; }
@@ -182,10 +187,12 @@ body {
     text-align: left;
 }
 
+/* পিসির স্ক্রিনে মোবাইলের প্রোফাইল পিকচার হাইড রাখার জন্য */
 .mobile-profile-container {
     display: none;
 }
 
+/* কন্টাক্ট বাটন স্টাইল */
 .btn.fade-in-btn {
     display: inline-block;
     margin-top: 30px;
@@ -246,6 +253,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
+/* সার্ভিস কার্ড গ্রিড */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -288,6 +296,7 @@ hr {
     font-size: 16px; 
 }
 
+/* স্কিলস সেকশন */
 .skills-grid {
     display: flex;
     justify-content: center;
@@ -314,6 +323,7 @@ hr {
     transform: translateY(-2px);
 }
 
+/* কন্টাক্ট সেকশন */
 .contact-email { font-size: 20px !important; }
 .contact-email a { color: #ff4757; text-decoration: none; font-weight: 600; }
 
@@ -343,6 +353,7 @@ hr {
     transform: scale(1.1);
 }
 
+/* ফুটার */
 footer {
     background-color: #05070a; 
     color: #64748b;
@@ -356,7 +367,6 @@ footer {
    ৫. মোবাইল রেসপন্সিভ মিডিয়া কুয়েরি (Mobile View)
    ========================================== */
 @media (max-width: 768px) {
-    /* 🎯 মোবাইলে কভারের Contact Me বাটনটি শতভাগ হাইড রাখার জন্য */
     .hide-on-mobile {
         display: none !important;
     }
@@ -415,6 +425,7 @@ footer {
         text-align: center;
     }
 
+    /* প্রোফাইল পিকচার ফিক্স */
     .mobile-profile-container {
         display: flex;
         justify-content: center;
