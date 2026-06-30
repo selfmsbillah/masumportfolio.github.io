@@ -65,7 +65,7 @@ body {
 }
 
 /* ==========================================
-   ৩. কভার ফটো ও হেডার ডিজাইন (PC) + টাইপিং অ্যানিমেশন
+   ৩. কভার ফটো ও হেডার ডিজাইন (PC) + প্রিমিয়াম অ্যানিমেশন
    ========================================== */
 .hero-section {
     background-image: url('cover.jpeg'); 
@@ -140,7 +140,7 @@ body {
     width: 100%;
 }
 
-/* পিসির জন্য টাইপিং অ্যানিমেশন */
+/* 🎯 প্রিমিয়াম মসৃণ টাইপিং স্টাইল (এখানে steps বাদ দিয়ে মাখনের মতো মসৃণ করা হয়েছে) */
 .typing-text {
     display: inline-block;
     white-space: nowrap;
@@ -148,7 +148,8 @@ body {
     border-right: 3px solid #ff4757; 
     color: #fff;
     width: 0;
-    animation: typing 6s steps(7, end) infinite, blink 0.75s step-end infinite;
+    /* ৫ সেকেন্ডের লুপ: টাইপ হবে স্মুথলি, হোল্ড করবে, তারপর ফেড-আউট হবে */
+    animation: premiumTyping 5s ease-in-out infinite, blink 0.75s step-end infinite;
 }
 
 /* Masum Billah লেখার কালার গ্রেডিয়েন্ট */
@@ -160,16 +161,17 @@ body {
     margin-top: 5px;
 }
 
-/* পিসির কিফ্রেম লুপ */
-@keyframes typing {
-    0% { width: 0; }
-    35% { width: 195px; }  
-    70% { width: 195px; }  
-    95% { width: 0; }      
-    100% { width: 0; }
+/* 🎯 নতুন প্রিমিয়াম কিফ্রেম (১.৫ সেকেন্ডে স্মুথলি টাইপ হবে -> ২.৫ সেকেন্ড হোল্ড করবে -> ১ সেকেন্ডে ফেড-আউট হবে) */
+@keyframes premiumTyping {
+    0% { width: 0; opacity: 0; }
+    5% { opacity: 1; }
+    30% { width: 195px; opacity: 1; }  /* ২৫% এ টাইপিং শেষ (১.২৫ সেকেন্ড) */
+    80% { width: 195px; opacity: 1; }  /* ৮০% পর্যন্ত হোল্ড (প্রায় ২.৫ সেকেন্ড স্থির থাকবে) */
+    98% { width: 195px; opacity: 0; }  /* চমৎকারভাবে কুয়াশার মতো হালকা হয়ে মিলিয়ে যাবে */
+    100% { width: 0; opacity: 0; }
 }
 
-/* কার্সর ব্লিঙ্কিং */
+/* কারসরের প্রিমিয়াম ব্লিঙ্কিং ইফেক্ট */
 @keyframes blink {
     from, to { border-color: transparent }
     50% { border-color: #ff4757; }
@@ -251,7 +253,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* সার্ভিসカード গ্রিড */
+/* সার্ভিস কার্ড গ্রিড */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -365,7 +367,6 @@ footer {
    ৫. মোবাইল রেসপন্সিভ মিডিয়া কুয়েরি (Mobile View)
    ========================================== */
 @media (max-width: 768px) {
-    /* 🎯 মোবাইলের ক্ষেত্রে হিরো সেকশনের ভেতরের Contact Me বাটনটি হাইড করার রুল */
     .hide-on-mobile {
         display: none !important;
     }
@@ -409,13 +410,14 @@ footer {
         text-align: center;
     }
 
-    /* মোবাইলের জন্য উইডথ ও টাইমিং ফিক্স */
-    @keyframes typing {
-        0% { width: 0; }
-        35% { width: 140px; } 
-        70% { width: 140px; } 
-        95% { width: 0; }
-        100% { width: 0; }
+    /* 🎯 মোবাইলের জন্য প্রিমিয়াম মসৃণ টাইপিং কিফ্রেম */
+    @keyframes premiumTyping {
+        0% { width: 0; opacity: 0; }
+        5% { opacity: 1; }
+        30% { width: 140px; opacity: 1; }  
+        80% { width: 140px; opacity: 1; }  
+        98% { width: 140px; opacity: 0; }  
+        100% { width: 0; opacity: 0; }
     }
 
     .hero-text p.fade-in-subtitle {
