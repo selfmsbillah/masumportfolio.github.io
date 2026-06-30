@@ -79,7 +79,7 @@ body {
     overflow: hidden; 
 }
 
-/* ভাসমান লোগো অ্যানিমেশন এরিয়া */
+/* ভাসমান লোগো কন্টেইনার */
 .floating-logos {
     position: absolute;
     top: 0;
@@ -92,17 +92,17 @@ body {
 
 .floating-logos i {
     position: absolute;
-    font-size: 55px; /* আইকন সাইজ সামান্য ছোট করা হলো প্রিমিয়াম লুকের জন্য */
-    opacity: 0.3;
-    animation: floatAnimation 6s ease-in-out infinite;
+    font-size: 55px; 
+    opacity: 0.35;
+    animation: floatAnimation 6s ease-in-out infinite !important;
 }
 
-/* 🎯 আইকনগুলোর নতুন ১০০% সেফ পজিশন (যা টেক্সট বা ছবির ওপরে আসবে না) */
-.logo-html { top: 12%; left: 4%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.3)); animation-delay: 0s !important; }
-.logo-css  { bottom: 35%; left: 4%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.3)); animation-delay: 1.5s !important; }
-.logo-js   { top: 12%; left: 45%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.3)); animation-delay: 3s !important; } /* টেক্সট ও ছবির মাঝের ফাঁকা জায়গায় */
-.logo-node { top: 12%; right: 4%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.3)); animation-delay: 0.8s !important; } /* ছবির ডান পাশে ওপরে */
-.logo-react { bottom: 35%; right: 4%; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.3)); animation-delay: 2.2s !important; } /* ছবির ডান পাশে নিচে */
+/* 🎯 ল্যাপটপ ও পিসির জন্য ১০০% স্ট্যাবল পজিশনিং (ছবি ও টেক্সট থেকে সম্পূর্ণ সেফ) */
+.logo-html  { top: 12% !important; left: 4% !important; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.3)); }
+.logo-css   { bottom: 35% !important; left: 4% !important; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.3)); }
+.logo-js    { top: 15% !important; left: 48% !important; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.3)); } /* 🎯 আপনার মার্ক করা খালি জায়গায় */
+.logo-node  { top: 12% !important; left: 90% !important; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.3)); } /* ছবির ডানে ওপরে */
+.logo-react { bottom: 35% !important; left: 90% !important; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.3)); } /* ছবির ডানে নিচে */
 
 @keyframes floatAnimation {
     0% { transform: translateY(0px) rotate(0deg); }
@@ -110,7 +110,7 @@ body {
     100% { transform: translateY(0px) rotate(0deg); }
 }
 
-/* কভারের ওপরের কালো শ্যাডো লেয়ার */
+/* কভারের ওপরের শ্যাডো লেয়ার */
 .overlay {
     background-color: rgba(0, 0, 0, 0.35);
     width: 100%;
@@ -143,10 +143,10 @@ body {
 
 .typing-container {
     display: inline-block;
-    min-width: 200px; /* অ্যানিমেশনের সময় অন্য টেক্সট যেন ধাক্কা না খায় */
+    min-width: 200px; 
 }
 
-/* 🎯 প্রিমিয়াম টাইপিং স্টাইল (উইডথ ফিক্সড ১৯০ পিক্সেল) */
+/* প্রিমিয়াম টাইপিং স্টাইল */
 .typing-text {
     display: inline-block;
     white-space: nowrap;
@@ -157,7 +157,7 @@ body {
     animation: premiumTyping 5s ease-in-out infinite, blink 0.75s step-end infinite;
 }
 
-/* Masum Billah লেখার কালার গ্রেডিয়েন্ট */
+/* নাম কালার গ্রেডিয়েন্ট */
 .name-text {
     background: linear-gradient(to right, #ff4757, #60a5fa);
     -webkit-background-clip: text;
@@ -166,7 +166,6 @@ body {
     margin-top: 5px;
 }
 
-/* প্রিমিয়াম কিফ্রেম লুপ */
 @keyframes premiumTyping {
     0% { width: 0; opacity: 0; }
     5% { opacity: 1; }
@@ -176,7 +175,6 @@ body {
     100% { width: 0; opacity: 0; }
 }
 
-/* কার্সর ব্লিঙ্কিং */
 @keyframes blink {
     from, to { border-color: transparent }
     50% { border-color: #ff4757; }
@@ -192,12 +190,10 @@ body {
     text-align: left;
 }
 
-/* পিসির স্ক্রিনে মোবাইলের প্রোফাইল পিকচার হাইড রাখার জন্য */
 .mobile-profile-container {
     display: none;
 }
 
-/* কন্টাক্ট বাটন স্টাইল */
 .btn.fade-in-btn {
     display: inline-block;
     margin-top: 30px;
@@ -258,7 +254,6 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* сервис карты */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -301,7 +296,6 @@ hr {
     font-size: 16px; 
 }
 
-/* স্কিলস সেকশন */
 .skills-grid {
     display: flex;
     justify-content: center;
@@ -328,7 +322,6 @@ hr {
     transform: translateY(-2px);
 }
 
-/* কন্টাক্ট সেকশন */
 .contact-email { font-size: 20px !important; }
 .contact-email a { color: #ff4757; text-decoration: none; font-weight: 600; }
 
@@ -358,13 +351,12 @@ hr {
     transform: scale(1.1);
 }
 
-/* ফুটার */
 footer {
     background-color: #05070a; 
     color: #64748b;
     text-align: center;
     padding: 35px;
-    font-size: 15px; 
+    font-size: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -419,7 +411,6 @@ footer {
         min-width: auto;
     }
 
-    /* মোবাইলের জন্য প্রিমিয়াম মসৃণ টাইপিং কিফ্রেম */
     @keyframes premiumTyping {
         0% { width: 0; opacity: 0; }
         5% { opacity: 1; }
@@ -434,7 +425,6 @@ footer {
         text-align: center;
     }
 
-    /* প্রোফাইল পিকচার ফিক্স */
     .mobile-profile-container {
         display: flex;
         justify-content: center;
@@ -453,16 +443,16 @@ footer {
         background-color: #080b10;
     }
 
-    /* মোবাইলেও আইকনগুলো চারকোণায় সেফ থাকবে */
+    /* মোবাইলেও আইকনগুলো থাকবে একুরেট চারকোণায় */
     .floating-logos i {
         font-size: 35px; 
         opacity: 0.15; 
     }
-    .logo-html  { top: 12%; left: 5%; }
-    .logo-css   { bottom: 15%; left: 5%; }
-    .logo-js    { top: 12%; left: 45%; }
-    .logo-node  { top: 12%; right: 5%; }
-    .logo-react { bottom: 15%; right: 5%; }
+    .logo-html  { top: 12% !important; left: 5% !important; }
+    .logo-css   { bottom: 15% !important; left: 5% !important; }
+    .logo-js    { top: 12% !important; left: 45% !important; }
+    .logo-node  { top: 12% !important; left: 85% !important; }
+    .logo-react { bottom: 15% !important; left: 85% !important; }
 
     .container { padding: 50px 20px; }
     #about.container { padding-top: 45px; } 
