@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masum Billah - Portfolio</title>
+    <!-- সিএসএস ফাইল লিঙ্ক -->
     <link rel="stylesheet" href="index.css">
+    <!-- ফন্ট অসাম আইকন লাইব্রেরি লিঙ্ক -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- মেনুবার বা ন্যাভিগেশন সেকশন শুরু -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo"><strong>Masum Billah</strong></div>
@@ -20,8 +23,11 @@
             </ul>
         </div>
     </nav>
+    <!-- মেনুবার সেকশন শেষ -->
 
+    <!-- কভার বা হিরো সেকশন শুরু -->
     <header class="hero-section">
+        <!-- ব্যাকগ্রাউন্ডে ভাসমান লোগোসমূহ -->
         <div class="floating-logos">
             <i class="fa-brands fa-html5 logo-html"></i>
             <i class="fa-brands fa-css3-alt logo-css"></i>
@@ -30,27 +36,33 @@
             <i class="fa-brands fa-react logo-react"></i>
         </div>
 
+        <!-- কালো শ্যাডো বা ওভারলে লেয়ার -->
         <div class="overlay">
             <div class="hero-text">
                 <h1 class="fade-in-title">Welcome, I am Masum Billah</h1>
-                <p class="fade-in-subtitle">I am a Professional Web Developer and Designer</p>
-                <!-- মোবাইলে হাইড করার জন্য hide-on-mobile ক্লাস যুক্ত করা হয়েছে -->
+                <!-- আপনার নতুন টেক্সট এখানে পরিবর্তন করা হয়েছে -->
+                <p class="fade-in-subtitle">I am an AI-Driven Full Stack Web Developer</p>
+                <!-- মোবাইলে হাইড করার জন্য hide-on-mobile ক্লাস যুক্ত বাটন -->
                 <a href="#contact" class="btn fade-in-btn hide-on-mobile">Contact Me</a>
             </div>
         </div>
     </header>
+    <!-- কভার বা হিরো সেকশন শেষ -->
 
-    <!-- মোবাইলের প্রোফাইল পিকচার (যা এবাউট সেকশনের ওপরে শুধু ফোনে দেখাবে) -->
+    <!-- মোবাইলের প্রোফাইল পিকচার সেকশন (যা শুধু ফোনে কভারের নিচে দেখাবে) -->
     <div class="mobile-profile-container">
         <img src="profail.png" alt="Masum Billah Profile" class="mobile-profile-img">
     </div>
 
+    <!-- আমার সম্পর্কে (About Me) সেকশন শুরু -->
     <section id="about" class="container">
         <h2>About Me</h2>
         <hr>
         <p>Hello! I am Masum Billah. I am a passionate web developer who enjoys building modern, responsive, and user-friendly websites using the latest technologies. Welcome to my portfolio, where I showcase my digital creations and technical skills.</p>
     </section>
+    <!-- About Me সেকশন শেষ -->
 
+    <!-- আমার সার্ভিস (Services) সেকশন শুরু -->
     <section id="services" class="container">
         <h2>My Services</h2>
         <hr>
@@ -67,7 +79,9 @@
             </div>
         </div>
     </section>
+    <!-- Services সেকশন শেষ -->
 
+    <!-- দক্ষতা (Skills) সেকশন শুরু -->
     <section id="skills" class="container">
         <h2>My Skills</h2>
         <hr>
@@ -80,24 +94,31 @@
             <div class="skill-tag">Git & GitHub</div>
         </div>
     </section>
+    <!-- Skills সেকশন শেষ -->
 
+    <!-- যোগাযোগ (Contact) সেকশন শুরু -->
     <section id="contact" class="container">
         <h2>Get In Touch</h2>
         <hr>
         <p>If you have any questions, project ideas, or just want to say hello, feel free to reach out. I would love to hear from you!</p>
         <p class="contact-email"><strong>Email:</strong> <a href="mailto:self.masumbillah@gmail.com">self.masumbillah@gmail.com</a></p>
         
+        <!-- সোশ্যাল মিডিয়া লিঙ্কসমূহ -->
         <div class="social-links">
             <a href="https://github.com/selfmsbillah" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/selfmsbillah/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             <a href="https://www.facebook.com/self.masumbillah/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
     </section>
+    <!-- Contact সেকশন শেষ -->
 
+    <!-- ফুটার সেকশন শুরু -->
     <footer>
         <p>&copy; 2026 Masum Billah. All Rights Reserved.</p>
     </footer>
+    <!-- ফুটার সেকশন শেষ -->
 
+    <!-- পেজ লোড স্ক্রিপ্ট (রিফ্রেশ করলে পেজ যেন একদম ওপরে চলে যায়) -->
     <script>
         window.onbeforeunload = function () {
             window.scrollTo(0, 0);
