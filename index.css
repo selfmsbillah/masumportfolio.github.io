@@ -1,4 +1,4 @@
-/* জেনারেল ریسےট */
+/* জেনারেল রিসেট */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     background: radial-gradient(circle at center, #131924 0%, #080b10 100%);
     background-attachment: fixed;
     color: #e3e3e3; 
-    line-height: 1.7; /* রিডিবিলিটি বাড়ানোর জন্য */
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -27,7 +27,7 @@ body {
 }
 
 .nav-container {
-    max-width: 1200px; /* স্ট্যান্ডার্ড ওয়াইড কন্টেইনার */
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -60,7 +60,7 @@ body {
     color: #ff4757;
 }
 
-/* কভার ফটো ও হেডার ডিজাইন */
+/* কভার ফটো ও হেডার ডিজাইন (ল্যাপটপের জন্য সব আগের মতোই আছে) */
 .hero-section {
     background-image: url('cover.jpeg'); 
     background-size: cover;
@@ -73,30 +73,28 @@ body {
     overflow: hidden; 
 }
 
-/* ভাসমান লোগোর জন্য ব্যাকগ্রাউন্ড লেয়ার এরিয়া ফিক্স */
+/* ভাসমান লোগো এরিয়া */
 .floating-logos {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* ব্যাকগ্রাউন্ড ইমেজের ঠিক উপরে থাকবে */
-    pointer-events: none; /* লোগোর কারণে বাটনে যেন ক্লিক করতে সমস্যা না হয় */
+    z-index: 1;
+    pointer-events: none;
 }
 
-/* লোগোগুলোর গ্লোয়িং এবং ব্যাকগ্রাউন্ড প্রফেশনাল স্টাইল */
 .floating-logos i {
     position: absolute;
     font-size: 65px; 
-    opacity: 0.4; /* অপাসিটি কমানো হলো যেন লেখা খুব সহজে পড়া যায় */
+    opacity: 0.4;
     animation: floatAnimation 6s ease-in-out infinite;
 }
 
-/* পিসির জন্য লোগোর স্ট্যান্ডার্ড পজিশন (মুখ বা লেখার থেকে দূরে) */
 .logo-html { top: 20%; left: 8%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.4)); animation-delay: 0s !important; }
 .logo-css { bottom: 15%; left: 5%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.4)); animation-delay: 1.5s !important; }
 .logo-js { bottom: 12%; left: 28%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.4)); animation-delay: 3s !important; }
-.logo-node { top: 25%; right: 5%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.4)); animation-delay: 0.8s !important; } /* নোড জেএস ডান পাশে সরানো হলো */
+.logo-node { top: 25%; right: 5%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.4)); animation-delay: 0.8s !important; }
 .logo-react { bottom: 15%; right: 5%; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.4)); animation-delay: 2.2s !important; }
 
 @keyframes floatAnimation {
@@ -106,7 +104,7 @@ body {
 }
 
 .overlay {
-    background-color: rgba(0, 0, 0, 0.3); /* কভার ফটো সুন্দর দেখার জন্য অপাসিটি ব্যালেন্স */
+    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
     height: 100%;
     display: flex;
@@ -120,14 +118,16 @@ body {
     padding: 0 60px; 
     max-width: 900px;
     position: relative;
-    z-index: 10; /* লোগো এবং ওভারলের উপরে লেখা রাখার জন্য সবচেয়ে উচ্চ লেয়ার */
+    z-index: 10;
 }
 
 .hero-text h1.fade-in-title {
-    font-size: 42px; /* বড় স্ক্রিনের জন্য টাইটেল সাইজ একটু ছোট করা হলো */
-    color: #60a5fa; 
+    font-size: 42px; 
+    background: linear-gradient(to right, #ff4757, #60a5fa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 20px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out forwards; 
 }
 
@@ -140,7 +140,7 @@ body {
     animation-delay: 0.3s; 
 }
 
-/* পিসির বা ল্যাপটপের জন্য মোবাইল প্রোফাইল ডিফল্টভাবে হাইড থাকবে */
+/* পিসির জন্য মোবাইল প্রোফাইল ডিফল্টভাবে হাইড থাকবে */
 .mobile-profile-container {
     display: none;
 }
@@ -203,7 +203,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* সার্ভিস গ্রিড */
+/* 서비스 গ্রি드 */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -325,11 +325,11 @@ footer {
 
     .nav-links { gap: 20px; }
 
-    /* মোবাইলের জন্য কভার ব্যাকগ্রাউন্ড ইমেজ cover2 হবে */
+    /* মোবাইলের জন্য কভার ব্যাকগ্রাউন্ড ইমেজ */
     .hero-section {
         background-image: url('cover2.jpg'); 
         height: auto;
-        padding: 140px 0 40px 0;
+        padding: 130px 0 60px 0; /* প্যাডিং ঠিক করা হলো যাতে টেক্সট ক্লিয়ার থাকে */
     }
 
     .hero-text {
@@ -345,23 +345,28 @@ footer {
         font-size: 18px;
     }
 
-    /* মোবাইলে এবাউট সেকশনের ঠিক ওপরে প্রোফাইল ফটো দৃশ্যমান করার জন্য */
+    /* 🎯 মোবাইলে "Contact Me" বাটন হাইড করার জন্য */
+    .btn.fade-in-btn {
+        display: none !important;
+    }
+
+    /* 🎯 প্রোফাইল পিকচারের পজিশন সুন্দর করার জন্য ফিক্স */
     .mobile-profile-container {
         display: flex;
         justify-content: center;
-        margin-top: -75px; /* কভার ফটোর কিছুটা ওপরে ফেসবুকের মতো ওভারল্যাপ করানোর জন্য */
+        margin-top: -65px; /* কভারের নিচে সুন্দরভাবে হাফ-ওভারল্যাপ করার জন্য পারফেক্ট মার্জিন */
         position: relative;
         z-index: 99;
     }
 
-    /* ফেসবুকের মতো বর্ডারসহ গোল প্রোফাইল ফটো স্টাইল */
+    /* প্রোফাইল ফটো স্টাইল */
     .mobile-profile-img {
-        width: 140px;
-        height: 140px;
+        width: 135px;
+        height: 135px;
         object-fit: cover;
-        border-radius: 50%; /* পুরোপুরি সার্কেল করার জন্য */
+        border-radius: 50%; 
         border: 4px solid #ff4757; /* পিংক কালার আউটলাইন */
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* গ্লোয়িং এবং প্রফেশনাল শ্যাডো এফেক্ট */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); 
         background-color: #080b10;
     }
 
@@ -376,9 +381,9 @@ footer {
     .logo-node { top: 12%; right: 6%; }
     .logo-react { top: 45%; left: 4%; }
 
-    /* প্রোফাইল ইমেজ আসার পর এবাউট সেকশনের টপ প্যাডিং কিছুটা ফিক্স করা হলো */
+    /* প্যাডিং স্পেস অ্যাডজাস্টমেন্ট */
     .container { padding: 60px 20px; }
-    #about.container { padding-top: 40px; } 
+    #about.container { padding-top: 35px; } 
     
     h2 { font-size: 28px; }
     .container p { font-size: 16px; }
