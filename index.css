@@ -92,21 +92,21 @@ body {
 
 .floating-logos i {
     position: absolute;
-    font-size: 65px; 
-    opacity: 0.4;
+    font-size: 55px; /* আইকন সাইজ সামান্য ছোট করা হলো প্রিমিয়াম লুকের জন্য */
+    opacity: 0.3;
     animation: floatAnimation 6s ease-in-out infinite;
 }
 
-/* 🎯 আইকনগুলোর নতুন এবং পারফেক্ট পজিশন (যা Welcome লেখার নিচে পড়বে না) */
-.logo-html { top: 15%; left: 3%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.4)); animation-delay: 0s !important; }
-.logo-css { bottom: 25%; left: 3%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.4)); animation-delay: 1.5s !important; }
-.logo-js { top: 22%; left: 52%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.4)); animation-delay: 3s !important; } /* মার্ক করা খালি জায়গায় */
-.logo-node { top: 25%; right: 5%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.4)); animation-delay: 0.8s !important; }
-.logo-react { bottom: 15%; right: 5%; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.4)); animation-delay: 2.2s !important; }
+/* 🎯 আইকনগুলোর নতুন ১০০% সেফ পজিশন (যা টেক্সট বা ছবির ওপরে আসবে না) */
+.logo-html { top: 12%; left: 4%; color: #e34c26; filter: drop-shadow(0 0 15px rgba(227, 76, 38, 0.3)); animation-delay: 0s !important; }
+.logo-css  { bottom: 35%; left: 4%; color: #264de4; filter: drop-shadow(0 0 15px rgba(38, 77, 228, 0.3)); animation-delay: 1.5s !important; }
+.logo-js   { top: 12%; left: 45%; color: #f7df1e; filter: drop-shadow(0 0 15px rgba(247, 223, 30, 0.3)); animation-delay: 3s !important; } /* টেক্সট ও ছবির মাঝের ফাঁকা জায়গায় */
+.logo-node { top: 12%; right: 4%; color: #68a063; filter: drop-shadow(0 0 15px rgba(104, 160, 99, 0.3)); animation-delay: 0.8s !important; } /* ছবির ডান পাশে ওপরে */
+.logo-react { bottom: 35%; right: 4%; color: #61dafb; filter: drop-shadow(0 0 15px rgba(97, 218, 251, 0.3)); animation-delay: 2.2s !important; } /* ছবির ডান পাশে নিচে */
 
 @keyframes floatAnimation {
     0% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(6deg); }
+    50% { transform: translateY(-12px) rotate(5deg); }
     100% { transform: translateY(0px) rotate(0deg); }
 }
 
@@ -141,7 +141,12 @@ body {
     width: 100%;
 }
 
-/* প্রিমিয়াম মসৃণ টাইপিং স্টাইল */
+.typing-container {
+    display: inline-block;
+    min-width: 200px; /* অ্যানিমেশনের সময় অন্য টেক্সট যেন ধাক্কা না খায় */
+}
+
+/* 🎯 প্রিমিয়াম টাইপিং স্টাইল (উইডথ ফিক্সড ১৯০ পিক্সেল) */
 .typing-text {
     display: inline-block;
     white-space: nowrap;
@@ -165,9 +170,9 @@ body {
 @keyframes premiumTyping {
     0% { width: 0; opacity: 0; }
     5% { opacity: 1; }
-    30% { width: 195px; opacity: 1; }  
-    80% { width: 195px; opacity: 1; }  
-    98% { width: 195px; opacity: 0; }  
+    30% { width: 190px; opacity: 1; }  
+    80% { width: 190px; opacity: 1; }  
+    98% { width: 190px; opacity: 0; }  
     100% { width: 0; opacity: 0; }
 }
 
@@ -253,7 +258,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* সার্ভিস কার্ড গ্রিড */
+/* сервис карты */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -410,13 +415,17 @@ footer {
         text-align: center;
     }
 
+    .typing-container {
+        min-width: auto;
+    }
+
     /* মোবাইলের জন্য প্রিমিয়াম মসৃণ টাইপিং কিফ্রেম */
     @keyframes premiumTyping {
         0% { width: 0; opacity: 0; }
         5% { opacity: 1; }
-        30% { width: 140px; opacity: 1; }  
-        80% { width: 140px; opacity: 1; }  
-        98% { width: 140px; opacity: 0; }  
+        30% { width: 135px; opacity: 1; }  
+        80% { width: 135px; opacity: 1; }  
+        98% { width: 135px; opacity: 0; }  
         100% { width: 0; opacity: 0; }
     }
 
@@ -444,15 +453,16 @@ footer {
         background-color: #080b10;
     }
 
+    /* মোবাইলেও আইকনগুলো চারকোণায় সেফ থাকবে */
     .floating-logos i {
         font-size: 35px; 
-        opacity: 0.2; 
+        opacity: 0.15; 
     }
-    .logo-html { top: 15%; left: 8%; }
-    .logo-css { bottom: 10%; left: 8%; }
-    .logo-js { bottom: 10%; right: 8%; left: auto; }
-    .logo-node { top: 15%; right: 8%; }
-    .logo-react { top: 45%; left: 5%; }
+    .logo-html  { top: 12%; left: 5%; }
+    .logo-css   { bottom: 15%; left: 5%; }
+    .logo-js    { top: 12%; left: 45%; }
+    .logo-node  { top: 12%; right: 5%; }
+    .logo-react { bottom: 15%; right: 5%; }
 
     .container { padding: 50px 20px; }
     #about.container { padding-top: 45px; } 
