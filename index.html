@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masum Billah - Portfolio</title>
-    <link rel="stylesheet" href="index.css?v=7.0">
+    <!-- v=9.0 to clear any previous cache -->
+    <link rel="stylesheet" href="index.css?v=9.0">
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo"><strong>Masum Billah</strong></div>
@@ -16,12 +19,15 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero-section">
+        <!-- Floating Logos Area -->
         <div class="floating-logos">
             <i class="fa-brands fa-html5 logo-html"></i>
             <i class="fa-brands fa-css3-alt logo-css"></i>
@@ -40,21 +46,24 @@
                     <span class="name-text">I am Masum Billah</span>
                 </h1>
                 <p class="fade-in-subtitle">I am an AI-Driven Full Stack Web Developer</p>
-                <a href="#contact" class="btn fade-in-btn hide-on-mobile">Contact Me</a>
+                <a href="#projects" class="btn fade-in-btn hide-on-mobile">View My Work</a>
             </div>
         </div>
     </header>
 
+    <!-- Mobile Profile Picture Container -->
     <div class="mobile-profile-container">
         <img src="profail.png" alt="Masum Billah Profile" class="mobile-profile-img">
     </div>
 
+    <!-- About Section -->
     <section id="about" class="container">
         <h2>About Me</h2>
         <hr>
         <p>Hello! I am Masum Billah. I am a passionate web developer who enjoys building modern, responsive, and user-friendly websites using the latest technologies. Welcome to my portfolio, where I showcase my digital creations and technical skills.</p>
     </section>
 
+    <!-- Services Section -->
     <section id="services" class="container">
         <h2>My Services</h2>
         <hr>
@@ -72,6 +81,7 @@
         </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills" class="container">
         <h2>My Skills</h2>
         <hr>
@@ -85,6 +95,56 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <h2>My Recent Projects</h2>
+        <hr>
+        <p>Here is a selection of my recent work. You can explore the live demonstrations or dive directly into the source code on GitHub.</p>
+        
+        <div class="projects-grid">
+            <!-- Project Card 1 -->
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="cover.jpeg" alt="E-Commerce Project" class="project-img"> 
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce Web Application</h3>
+                    <p>A fully responsive e-commerce platform featuring an intuitive shopping cart system, dynamic category filtering, and a secure checkout simulation.</p>
+                    <div class="project-tech-tags">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="proj-btn live-btn"><i class="fa-solid fa-earth-americas"></i> Live Demo</a>
+                        <a href="#" target="_blank" class="proj-btn git-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="project-card">
+                <div class="project-image-wrapper">
+                    <img src="cover.jpeg" alt="AI Portfolio Project" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>AI-Driven Business Portfolio</h3>
+                    <p>An advanced business website integrated with smart interactive components, fluid custom animations, and a highly polished UI design.</p>
+                    <div class="project-tech-tags">
+                        <span>CSS Grid</span>
+                        <span>Animations</span>
+                        <span>JS Core</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank" class="proj-btn live-btn"><i class="fa-solid fa-earth-americas"></i> Live Demo</a>
+                        <a href="#" target="_blank" class="proj-btn git-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="container">
         <h2>Get In Touch</h2>
         <hr>
@@ -98,6 +158,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Masum Billah. All Rights Reserved.</p>
     </footer>
