@@ -213,7 +213,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* সার্ভিস কার্ড গ্রিড */
+/* সার্ভিসカード গ্রিড */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -375,11 +375,11 @@ footer {
         display: none !important;
     }
 
-    /* 🎯 প্রোফাইল পিকচারটি কভার থেকে আর একটু নিচে নামানোর ফিক্স */
+    /* প্রোফাইল পিকচারটি কভার থেকে আর একটু নিচে নামানোর ফিক্স */
     .mobile-profile-container {
         display: flex;
         justify-content: center;
-        margin-top: -35px; /* আগের -65px থেকে পরিবর্তন করে -35px করা হয়েছে যেন ছবি নিচে নামে */
+        margin-top: -35px; 
         position: relative;
         z-index: 99;
     }
@@ -423,4 +423,4 @@ footer {
         padding: 8px 16px;
         font-size: 14px;
     }
-}
+} /* <--- এই ব্র্যাকেটটি এখানে এসে পুরো মিডিয়া কুয়েরিটাকে নিখুঁতভাবে বন্ধ করেছে */
