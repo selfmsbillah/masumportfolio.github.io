@@ -140,7 +140,7 @@ body {
     width: 100%;
 }
 
-/* 🎯 পিসির জন্য টাইপিং অ্যানিমেশন (কমা ছাড়া ৭টি লেটার ফিক্সড উইডথ) */
+/* পিসির জন্য টাইপিং অ্যানিমেশন */
 .typing-text {
     display: inline-block;
     white-space: nowrap;
@@ -148,7 +148,6 @@ body {
     border-right: 3px solid #ff4757; 
     color: #fff;
     width: 0;
-    /* Welcome = 7 letters, তাই steps(7) এবং ৬ সেকেন্ড লুপ */
     animation: typing 6s steps(7, end) infinite, blink 0.75s step-end infinite;
 }
 
@@ -161,12 +160,12 @@ body {
     margin-top: 5px;
 }
 
-/* পিসির কিফ্রেম লুপ (২ সেকেন্ড ফুল ফিক্সড হোল্ড) */
+/* পিসির কিফ্রেম লুপ */
 @keyframes typing {
     0% { width: 0; }
-    35% { width: 195px; }  /* 'Welcome' লেখার জন্য পারফেক্ট উইডথ */
-    70% { width: 195px; }  /* ৩৫% থেকে ৭০% পর্যন্ত (প্রায় ২ সেকেন্ড) লেখা স্থির থাকবে */
-    95% { width: 0; }      /* আস্তে করে মুছে যাবে */
+    35% { width: 195px; }  
+    70% { width: 195px; }  
+    95% { width: 0; }      
     100% { width: 0; }
 }
 
@@ -252,7 +251,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* সার্ভিস কার্ড গ্রিড */
+/* সার্ভিসカード গ্রিড */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -366,6 +365,11 @@ footer {
    ৫. মোবাইল রেসপন্সিভ মিডিয়া কুয়েরি (Mobile View)
    ========================================== */
 @media (max-width: 768px) {
+    /* 🎯 মোবাইলের ক্ষেত্রে হিরো সেকশনের ভেতরের Contact Me বাটনটি হাইড করার রুল */
+    .hide-on-mobile {
+        display: none !important;
+    }
+
     .nav-container {
         flex-direction: column;
         gap: 12px;
@@ -405,11 +409,11 @@ footer {
         text-align: center;
     }
 
-    /* 🎯 মোবাইলের জন্য কমা ছাড়া উইডথ ও টাইমিং ফিক্স (২ সেকেন্ড হোল্ড) */
+    /* মোবাইলের জন্য উইডথ ও টাইমিং ফিক্স */
     @keyframes typing {
         0% { width: 0; }
-        35% { width: 140px; } /* মোবাইলের সাইজ অনুযায়ী পারফেক্ট উইডথ */
-        70% { width: 140px; } /* মোবাইলেও ২ সেকেন্ড লেখা স্থির থাকবে */
+        35% { width: 140px; } 
+        70% { width: 140px; } 
         95% { width: 0; }
         100% { width: 0; }
     }
@@ -417,10 +421,6 @@ footer {
     .hero-text p.fade-in-subtitle {
         font-size: 16px;
         text-align: center;
-    }
-
-    .hide-on-mobile {
-        display: none !important;
     }
 
     /* প্রোফাইল পিকচার ফিক্স */
