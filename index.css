@@ -1,4 +1,4 @@
-/* জেনারেল ریسےٹ */
+/* জেনারেল ریسےট */
 * {
     margin: 0;
     padding: 0;
@@ -138,6 +138,11 @@ body {
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
     animation-delay: 0.3s; 
+}
+
+/* পিসির বা ল্যাপটপের জন্য মোবাইল প্রোফাইল ডিফল্টভাবে হাইড থাকবে */
+.mobile-profile-container {
+    display: none;
 }
 
 .btn.fade-in-btn {
@@ -320,28 +325,50 @@ footer {
 
     .nav-links { gap: 20px; }
 
+    /* মোবাইলের জন্য কভার ব্যাকগ্রাউন্ড ইমেজ cover2 হবে */
     .hero-section {
+        background-image: url('cover2.jpg'); 
         height: auto;
-        padding: 140px 0 60px 0;
+        padding: 140px 0 40px 0;
     }
 
     .hero-text {
         padding: 0 24px;
-        text-align: center; /* মোবাইলে লেখা মাঝখানে থাকবে */
+        text-align: center;
     }
 
     .hero-text h1.fade-in-title {
-        font-size: 34px; /* মোবাইল স্ক্রিনের জন্য পারফেক্ট বড় সাইজ */
+        font-size: 34px; 
     }
 
     .hero-text p.fade-in-subtitle {
         font-size: 18px;
     }
 
-    /* মোবাইলের স্ক্রিনে লোগোগুলোর পজিশন ও দৃশ্যমানতা নিখুঁত করা হলো */
+    /* মোবাইলে এবাউট সেকশনের ঠিক ওপরে প্রোফাইল ফটো দৃশ্যমান করার জন্য */
+    .mobile-profile-container {
+        display: flex;
+        justify-content: center;
+        margin-top: -75px; /* কভার ফটোর কিছুটা ওপরে ফেসবুকের মতো ওভারল্যাপ করানোর জন্য */
+        position: relative;
+        z-index: 99;
+    }
+
+    /* ফেসবুকের মতো বর্ডারসহ গোল প্রোফাইল ফটো স্টাইল */
+    .mobile-profile-img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+        border-radius: 50%; /* পুরোপুরি সার্কেল করার জন্য */
+        border: 4px solid #ff4757; /* পিংক কালার আউটলাইন */
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5); /* গ্লোয়িং এবং প্রফেশনাল শ্যাডো এফেক্ট */
+        background-color: #080b10;
+    }
+
+    /* মোবাইলের স্ক্রিনে ভাসমান লোগো পজিশন */
     .floating-logos i {
         font-size: 38px; 
-        opacity: 0.25; /* মোবাইলে লেখা পড়ার সুবিধার জন্য আইকন আরও ব্যাকগ্রাউন্ডে নেওয়া হলো */
+        opacity: 0.25; 
     }
     .logo-html { top: 12%; left: 6%; }
     .logo-css { bottom: 5%; left: 5%; }
@@ -349,7 +376,10 @@ footer {
     .logo-node { top: 12%; right: 6%; }
     .logo-react { top: 45%; left: 4%; }
 
+    /* প্রোফাইল ইমেজ আসার পর এবাউট সেকশনের টপ প্যাডিং কিছুটা ফিক্স করা হলো */
     .container { padding: 60px 20px; }
+    #about.container { padding-top: 40px; } 
+    
     h2 { font-size: 28px; }
     .container p { font-size: 16px; }
 
