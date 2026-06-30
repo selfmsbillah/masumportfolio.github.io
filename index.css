@@ -65,7 +65,7 @@ body {
 }
 
 /* ==========================================
-   ৩. কভার ফটো ও হেডার ডিজাইন (PC)
+   ৩. কভার ফটো ও হেডার ডিজাইন (PC) + টাইপিং অ্যানিমেশন
    ========================================== */
 .hero-section {
     background-image: url('cover.jpeg'); 
@@ -126,16 +126,54 @@ body {
     max-width: 900px;
     position: relative;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .hero-text h1.fade-in-title {
     font-size: 42px; 
+    margin-bottom: 20px;
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    display: block;
+    width: 100%;
+}
+
+/* 🎯 পিসির জন্য টাইপিং অ্যানিমেশন (কমা ছাড়া ৭টি লেটার ফিক্সড উইডথ) */
+.typing-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #ff4757; 
+    color: #fff;
+    width: 0;
+    /* steps(7) করা হয়েছে কারণ 'Welcome' এ ৭টি অক্ষর আছে */
+    animation: typing 6s steps(7, end) infinite, blink 0.75s step-end infinite;
+}
+
+/* Masum Billah লেখার কালার গ্রেডিয়েন্ট */
+.name-text {
     background: linear-gradient(to right, #ff4757, #60a5fa);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 20px;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    animation: fadeInUp 1s ease-out forwards; 
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* পিসির কিফ্রেম লুপ (২ সেকেন্ড ফুল ফিক্সড হোল্ড) */
+@keyframes typing {
+    0% { width: 0; }
+    35% { width: 195px; }  /* 'Welcome' লেখার জন্য একদম পারফেক্ট উইডথ */
+    70% { width: 195px; }  /* প্রায় ২ সেকেন্ড লেখাটা স্ক্রিনে স্থায়ী থাকবে */
+    95% { width: 0; }      /* আস্তে করে মুছে যাবে */
+    100% { width: 0; }
+}
+
+/* কার্সর ব্লিঙ্কিং */
+@keyframes blink {
+    from, to { border-color: transparent }
+    50% { border-color: #ff4757; }
 }
 
 .hero-text p.fade-in-subtitle {
@@ -145,6 +183,7 @@ body {
     opacity: 0;
     animation: fadeInUp 1s ease-out forwards;
     animation-delay: 0.3s; 
+    text-align: left;
 }
 
 /* পিসির স্ক্রিনে মোবাইলের প্রোফাইল পিকচার হাইড রাখার জন্য */
@@ -152,7 +191,7 @@ body {
     display: none;
 }
 
-/* কন্টাক্ট বাটন স্টাইল (PC) */
+/* কন্টাক্ট বাটন স্টাইল */
 .btn.fade-in-btn {
     display: inline-block;
     margin-top: 30px;
@@ -213,7 +252,7 @@ hr {
     margin: 0 auto 25px auto;
 }
 
-/* সার্ভিসカード গ্রিড */
+/* সার্ভিস কার্ড গ্রিড */
 .services-grid {
     display: flex;
     justify-content: center;
@@ -256,7 +295,7 @@ hr {
     font-size: 16px; 
 }
 
-/* স্কিলস সেকশন ট্যাগ */
+/* স্কিলস সেকশন */
 .skills-grid {
     display: flex;
     justify-content: center;
@@ -283,7 +322,7 @@ hr {
     transform: translateY(-2px);
 }
 
-/* কন্টাক্ট ইনফো ও সোশ্যাল মিডিয়া */
+/* কন্টাক্ট সেকশন */
 .contact-email { font-size: 20px !important; }
 .contact-email a { color: #ff4757; text-decoration: none; font-weight: 600; }
 
@@ -313,7 +352,7 @@ hr {
     transform: scale(1.1);
 }
 
-/* ফুটার স্টাইল */
+/* ফুটার */
 footer {
     background-color: #05070a; 
     color: #64748b;
@@ -335,7 +374,6 @@ footer {
 
     .nav-links { gap: 20px; }
 
-    /* মোবাইলের কভার ফটো এবং কালো শ্যাডো পারফেক্ট ফিট */
     .hero-section {
         background-image: url('cover2.jpg'); 
         height: 60vh; 
@@ -345,7 +383,6 @@ footer {
         align-items: center;
     }
 
-    /* মোবাইল ওভারলে কালো শ্যাডো লেয়ার */
     .overlay {
         width: 100%;
         height: 100%;
@@ -359,23 +396,34 @@ footer {
         padding: 0 24px;
         text-align: center;
         width: 100%;
+        align-items: center;
     }
 
     .hero-text h1.fade-in-title {
-        font-size: 32px; 
+        font-size: 30px; 
         margin-bottom: 12px;
+        text-align: center;
+    }
+
+    /* 🎯 মোবাইলের জন্য কমা ছাড়া উইডথ ও টাইমিং ফিক্স (২ সেকেন্ড হোল্ড) */
+    @keyframes typing {
+        0% { width: 0; }
+        35% { width: 140px; } /* মোবাইলের সাইজ অনুযায়ী ফিক্সড উইডথ যেন 'e' পুরো দেখায় */
+        70% { width: 140px; } /* মোবাইলেও ২ সেকেন্ড লেখাটা স্ক্রিনে থাকবে */
+        95% { width: 0; }
+        100% { width: 0; }
     }
 
     .hero-text p.fade-in-subtitle {
-        font-size: 17px;
+        font-size: 16px;
+        text-align: center;
     }
 
-    /* মোবাইলে "Contact Me" বাটন পুরোপুরি অদৃশ্য করার জন্য */
     .hide-on-mobile {
         display: none !important;
     }
 
-    /* প্রোফাইল পিকচারটি কভার থেকে আর একটু নিচে নামানোর ফিক্স */
+    /* প্রোফাইল পিকচার ফিক্স */
     .mobile-profile-container {
         display: flex;
         justify-content: center;
@@ -384,7 +432,6 @@ footer {
         z-index: 99;
     }
 
-    /* মোবাইলের গোল প্রোফাইল ছবির সাইজ ও বর্ডার */
     .mobile-profile-img {
         width: 130px;
         height: 130px;
@@ -395,7 +442,6 @@ footer {
         background-color: #080b10;
     }
 
-    /* মোবাইলে ভাসমান ব্যাকগ্রাউন্ড আইকন পজিশন */
     .floating-logos i {
         font-size: 35px; 
         opacity: 0.2; 
@@ -406,7 +452,6 @@ footer {
     .logo-node { top: 15%; right: 8%; }
     .logo-react { top: 45%; left: 5%; }
 
-    /* মোবাইল সেকশনের ভেতরের স্পেস অ্যাডজাস্টমেন্ট */
     .container { padding: 50px 20px; }
     #about.container { padding-top: 45px; } 
     
@@ -423,4 +468,4 @@ footer {
         padding: 8px 16px;
         font-size: 14px;
     }
-} /* <--- এই ব্র্যাকেটটি এখানে এসে পুরো মিডিয়া কুয়েরিটাকে নিখুঁতভাবে বন্ধ করেছে */
+}খানে এসে পুরো মিডিয়া কুয়েরিটাকে নিখুঁতভাবে বন্ধ করেছে */
